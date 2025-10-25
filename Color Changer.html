@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color changer</title>
+    <style>
+    body{
+      text-align: center;
+      background-color:grey ;
+    }
+      button{
+        padding: 10px;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        color:black;
+      }
+      #red
+      {
+        background-color:red;
+      }
+      #green{
+        background-color: green;
+      }
+      #blue{
+        background-color:blue;
+      }
+      #yellow{
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Color Changer</h1>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+    <button id="blue">Blue</button>
+    <button id="yellow">Yellow</button>
+    <p id="display"></p>
+    <button id="reset">Reset</button>
+    <script>
+      let r = document.getElementById("red")
+      let g = document.getElementById("green")
+      let b = document.getElementById("blue")
+      let y = document.getElementById("yellow")
+      let res = document.getElementById("reset")
+      r.addEventListener("click", function(){
+        document.body.style.backgroundColor = "red"
+        display.textContent = "You chose red"
+      })
+      g.addEventListener("click", function(){
+        document.body.style.backgroundColor = "green"
+        display.textContent = "You chose green"
+      })
+      b.addEventListener("click",function(){
+        document.body.style.backgroundColor = "blue"
+        display.textContent = "You chose blue"
+      })
+      y.addEventListener("click", function(){
+        document.body.style.backgroundColor = "yellow"
+        display.textContent = "You chose yellow"
+      })
+      res.addEventListener("click", function(){
+        document.body.style.backgroundColor = "white"
+        display.textContent = ""
+      })
+    </script>
+  </body>
+</html>
